@@ -23,6 +23,8 @@ public class Main {
 
         // calculette
         Main.calculate("2 3 +", 5);
+        Main.calculate("20 6 *", 120);
+        Main.calculate("3 10 5 + *", 45);
 
     }
 
