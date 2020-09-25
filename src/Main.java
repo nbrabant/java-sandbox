@@ -15,11 +15,11 @@ public class Main {
         Main.printDate();
         Main.printDeque();
 
-        Scanner in = new Scanner(System.in);
-        int n = in.nextInt();
-        String l = in.nextLine();
+//        Scanner in = new Scanner(System.in);
+//        int n = in.nextInt();
+//        String l = in.nextLine();
 
-        Solution.main();
+//        Solution.main();
 
         // calculette
         Main.calculate("2 3 +", 5);
@@ -35,9 +35,9 @@ public class Main {
     private static void calculate(String expression, int expected) {
         int result = Calculette.compute(expression);
         if (result != expected) {
-            System.out.printf("Error on compute : %s is not %s\n", result, expected);
+            System.out.printf("\u001B[31mError on compute : [%s] is not [%s]\u001B[0m\n", result, expected);
         } else {
-            System.out.println("Computation is correct");
+            System.out.printf("\u001B[32mComputation is correct for [%s] expression\u001B[0m\n", expression);
         }
     }
 
@@ -86,7 +86,7 @@ public class Main {
             deque.addLast(i);
         }
 
-        System.out.print(s[deque.peek()]);
+        System.out.print(s[deque.peek()] + "\n");
     }
 
 
